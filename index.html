@@ -4,20 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 
 <body>
 
-<p>Playlist - Input</p>
-<form onsubmit="post(); return false;">
-    <div class="df_fd_r">  
-        <input type="text" id="interpret" placeholder="interpret" required>
-        <input type="text" id="title" placeholder="title" required>
-        <button type="submit">POST</button>
+    <div class="df_fd_c">
+        <p>Playlist - Input</p>
+        <form onsubmit="post(); return false;">
+            <div class="df_fd_r">  
+                <input type="text" id="interpret" placeholder="interpret" required>
+                <input type="text" id="title" placeholder="title" required>
+                <button type="submit">POST</button>
+            </div>
+        </form>
+        <button type="button" onclick="get()">GET</button>
+        <p id="output-database"></p>
+        <br>
+        <p>Log in</p>
+        <form onsubmit="logInSubmit(); return false;">
+            <div class="df_fd_r">  
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
     </div>
-</form>
 
 </body>
 </html>
