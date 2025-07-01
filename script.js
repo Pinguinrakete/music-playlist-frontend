@@ -14,7 +14,8 @@ async function post() {
     let response = await fetch(POST_URL, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${apiKey}`
         },
         body: JSON.stringify(data)
         });
